@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Quicksand', sans-serif;
+ 
+  margin: 0;
+  padding: 0;
+}
+ 
+h2,
+h3 {
+  color: black;
+}
+ 
+footer {
+  padding: 20px;
+  color: black;
+  background-color: #EF9C66;
+ 
+  text-align: center;
+  font-weight: bold;
+}
+ 
+nav a {
+  font-size: 18px;
+ 
+  font-weight: 400;
+  text-decoration: none;
+ 
+  color: black;
+}
+ 
+nav a:hover {
+  font-weight: bold;
+}
+ 
+.profile header {
+  text-align: center;
+}
+
+.content-container { /* baru di tambah untuk image di kiri dan tulisan di kanan */
+  display: flex;
+  align-items: center;
+}
+ 
+.featured-image {
+  width: 40%;
+  max-height: 500px;
+ 
+  object-fit: cover;
+  object-position: center;
+}
+
+.text-content {
+  margin-left: 20px; /* Memberikan jarak antara gambar dan teks */
+  flex: 1; /* Agar teks mengambil sisa ruang */
+}
+ 
+.profile img {
+  max-width: 200px;
+}
+ 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+ 
+  padding: 20px;
+}
+ 
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #FCDC94;
+  text-align: center;
+  color: black;
+}
+ 
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  justify-content: center;
+ 
+  gap: 2rem;
+}
+ 
+nav li {
+  list-style-type: none;
+}
+ 
+nav {
+  background-color: #EF9C66;
+  padding: 5px;
+ 
+  position: sticky;
+  top: 0;
+}
+ 
+main {
+  padding: 20px;
+ 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+ 
+#content {
+  flex: 5;
+ 
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+ 
+aside {
+  flex: 1;
+}
+ 
+header {
+  display: inline;
+}
+ 
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column ;
+  }
+
+  aside {
+    order: -1; 
+  }
+ 
+}
+ 
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column; 
+  }
+
+  aside {
+    order: -1; 
+  }
+}
+.align-center {
+  text-align: center;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for the link/button */
+.dropbtn {
+  background-color: #FCDC94;
+  color: black;
+  padding: 14px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu when hovering */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #FCDC94;
+}
